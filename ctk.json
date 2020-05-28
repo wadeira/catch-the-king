@@ -1,0 +1,168 @@
+{
+  "sprites": {
+    "background": {
+      "width": 270,
+      "height": 200,
+      "tiles": [
+        {
+          "x": 4,
+          "y": 4
+        }
+      ]
+    },
+
+    "card-1": {
+      "width": 50,
+      "height": 36,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 204
+        }
+      ]
+    },
+
+    "card-2": {
+      "width": 50,
+      "height": 36,
+      "tiles": [
+        {
+          "x": 54,
+          "y": 204
+        }
+      ]
+    },
+
+    "card-3": {
+      "width": 50,
+      "height": 36,
+      "tiles": [
+        {
+          "x": 108,
+          "y": 204
+        }
+      ]
+    },
+
+    "card-4": {
+      "width": 50,
+      "height": 36,
+      "tiles": [
+        {
+          "x": 162,
+          "y": 204
+        }
+      ]
+    },
+
+    "card-5": {
+      "width": 50,
+      "height": 36,
+      "tiles": [
+        {
+          "x": 216,
+          "y": 204
+        }
+      ]
+    },
+
+    "card-6": {
+      "width": 50,
+      "height": 36,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 244
+        }
+      ]
+    },
+
+    "card-k": {
+      "width": 50,
+      "height": 36,
+      "tiles": [
+        {
+          "x": 54,
+          "y": 244
+        }
+      ]
+    },
+
+    "card-e": {
+      "width": 50,
+      "height": 36,
+      "reverse": true,
+      "speed": 0.35,
+      "tiles": [
+        {
+          "x": 186,
+          "y": 288
+        },
+        {
+          "x": 0,
+          "y": 340
+        },
+        {
+          "x": 54,
+          "y": 340
+        },
+        {
+          "x": 108,
+          "y": 340
+        },
+        {
+          "x": 162,
+          "y": 340
+        },
+        {
+          "x": 216,
+          "y": 340
+        }
+      ]
+    },
+
+    "card-count": {
+      "width": 30,
+      "height": 22,
+      "tiles": [
+        {
+          "x": 246,
+          "y": 280
+        }
+      ]
+    },
+
+    "card-bg": {
+      "width": 64,
+      "height": 48,
+      "tiles": [
+        {
+          "x": 0,
+          "y": 286
+        }
+      ]
+    },
+
+    "sb-title": {
+      "width": 93,
+      "height": 19,
+      "tiles": [
+        {
+          "x": 108,
+          "y": 244
+        }
+      ]
+    },
+
+    "points-bg": {
+      "width": 93,
+      "height": 18,
+      "tiles": [
+        {
+          "x": 108,
+          "y": 266
+        }
+      ]
+    }
+  }
+}

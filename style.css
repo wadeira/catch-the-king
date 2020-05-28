@@ -1,0 +1,33 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    background-color: rgba(16, 16, 21);
+    color: rgb(220, 220, 220);
+}
+
+a, a:hover, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    margin: auto
+}
+
+.footer .links li {
+    display: inline;
+}
+
+.footer .links li:not(:first-child)::before {
+    content: '♦';
+    margin-left: 5px;
+    padding-right: 10px;
+}
+
+.footer .disclaimer {
+    font-size: 10px;
+}
+
