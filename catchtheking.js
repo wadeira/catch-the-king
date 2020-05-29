@@ -36,13 +36,7 @@ class CatchTheKing {
     this.table = []
 
     if (id) {
-      let order = atob(id).split('')
-      for (let i of order) {
-        this.table.push({
-          revealed: false,
-          value: parseInt(i)
-        })
-      }
+      this.loadGame(id)
       return
     }
 
@@ -60,6 +54,32 @@ class CatchTheKing {
       this.table[i] = this.table[j]
       this.table[j] = temp
     }
+  }
+
+  loadGame(id) {
+    this.points = 0
+    this.lastReveal = 0
+    this.hand = []
+
+    for (let val of Object.keys(CTK_HAND_CARDS))
+    for (let i = 0; i < CTK_HAND_CARDS[val]; i++)
+      this.hand.push(val)
+
+    if (this.lastRevealTimer)
+      clearTimeout(this.lastRevealTimer)
+
+    let order = atob(id).split('')
+    
+    this.table = []
+
+    for (let i of order) {
+      this.table.push({
+        revealed: false,
+        value: parseInt(i)
+      })
+    }
+
+    console.log(this.table)
   }
 
   play({ x, y }) {

@@ -1,5 +1,5 @@
 const ANIMATION_DURATION = 2000
-let game
+let game;
 
 let spritesheet, spritedata
 let sprites = {}
@@ -23,7 +23,7 @@ function setup() {
   let canvas = createCanvas(400, 265)
   canvas.parent('game')
   
-  createGame()
+  createGame();
 
   // Load sprites
   for (let name of Object.keys(spritedata.sprites)) {
