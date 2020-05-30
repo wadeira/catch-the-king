@@ -9,6 +9,12 @@ let cardSize = {
   h: 36
 }
 
+let prizeColor = {
+  bronze: [205, 127, 50],
+  silver: [192, 192, 192],
+  gold: [212, 175, 55]
+}
+
 function createGame() {
   game = new CatchTheKing()
 }
@@ -98,6 +104,7 @@ function draw() {
     sprites['sb-title'].draw(0, 144)
     text('Pontos', 46, 154);
     sprites['points-bg'].draw(0, 162)
+    fill(game.points >= 400 ? game.points >= 550 ? prizeColor.gold : prizeColor.silver : prizeColor.bronze)
     text(game.points, 46, 172)
   }
   pop()
