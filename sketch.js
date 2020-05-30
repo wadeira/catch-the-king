@@ -61,6 +61,12 @@ function draw() {
         sprites[`card-${card.value}`].draw(x, y)
       else if (card.warning_animation && card.warning_animation + ANIMATION_DURATION > Date.now()) 
         sprites['card-e'].draw(x, y)
+      else if (!game.hand.length) {
+        sprites[`card-${card.value}`].draw(x, y)
+        
+        fill(0, 0, 0, 200)
+        rect(x, y, cardSize.w, cardSize.h)
+      }
       else
         sprites['card-k'].draw(x, y)
     }
