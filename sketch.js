@@ -1,5 +1,5 @@
 const ANIMATION_DURATION = 2000
-let game;
+let game
 
 let spritesheet, spritedata
 let sprites = {}
@@ -29,7 +29,7 @@ function setup() {
   let canvas = createCanvas(400, 265)
   canvas.parent('game')
   
-  createGame();
+  createGame()
 
   // Load sprites
   for (let name of Object.keys(spritedata.sprites)) {
@@ -50,7 +50,6 @@ function draw() {
     sprites['card-k'].draw(100, 100)
   }
   pop()
-
 
   // Draw table
   push()
@@ -82,27 +81,27 @@ function draw() {
   // Draw sidebar
   push()
   {
-    translate(280, 10);
-    fill(220);
+    translate(280, 10)
+    fill(220)
     textAlign(CENTER, CENTER)
 
     // My card
     sprites['sb-title'].draw(0, 0)
-    text('Minha Carta', 46, 10);
+    text('Minha Carta', 46, 10)
     sprites['card-bg'].draw(15, 22)
     if (game.hand.length)
       sprites[`card-${game.hand[0]}`].draw(15 + 8, 22 + 6)
     
     // Revealed Card
     sprites['sb-title'].draw(0, 72)
-    text('Carta Revelada', 46, 82);
+    text('Carta Revelada', 46, 82)
     sprites['card-bg'].draw(15, 94)
     if (game.lastReveal != 0)
       sprites[`card-${game.lastReveal}`].draw(15 + 8, 94 + 6)
 
     // Points
     sprites['sb-title'].draw(0, 144)
-    text('Pontos', 46, 154);
+    text('Pontos', 46, 154)
     sprites['points-bg'].draw(0, 162)
     fill(game.points >= 400 ? game.points >= 550 ? prizeColor.gold : prizeColor.silver : prizeColor.bronze)
     text(game.points, 46, 172)
@@ -115,7 +114,7 @@ function draw() {
     translate(0, 215)
     for (let i = 0; i < 6; i++) {
       sprites['card-bg'].draw(i * 63, 0)
-      let index = game.hand.indexOf((i + 1).toString());
+      let index = game.hand.indexOf((i + 1).toString())
       let count = game.hand.filter(val => val == (i + 1)).length
 
       if (game.hand[0] == game.hand[index])
