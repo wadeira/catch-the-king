@@ -124,7 +124,7 @@ class CatchTheKing {
       this.hand.shift()
     }
 
-    if (card.value <= holdingCard) {
+    if (card.value <= holdingCard && !(holdingCard == 5 && fiveNearby)) {
       card.revealed = true
 
       if (card.value != 5 || !fiveNearby)
